@@ -3,9 +3,42 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HW2", "HW2", "{63BF8FF5-C495-416D-A22B-537390D91144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RJL.UIP.CPro.HW2.Vehicle", "RJL.UIP.CPro.HW1.Vehicle\RJL.UIP.CPro.HW2.Vehicle.csproj", "{340EF931-2632-41A1-84D0-428859435F32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HW3", "HW3", "{AD4A697C-74B6-42F5-B7DA-262A658003EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RJL.UIP.CPro.HW3.WeatherSubscription", "RJL.UIP.CPro.HW3.WeatherSubscription\RJL.UIP.CPro.HW3.WeatherSubscription.csproj", "{7429FDBA-823D-4F46-88E7-5C1B345FDC20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherAPI", "OpenWeatherMap-API-CSharp-master\OpenWeatherAPI\OpenWeatherAPI.csproj", "{8A7EB2F4-8C39-481A-8B75-3D2350C95CC5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{340EF931-2632-41A1-84D0-428859435F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340EF931-2632-41A1-84D0-428859435F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340EF931-2632-41A1-84D0-428859435F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340EF931-2632-41A1-84D0-428859435F32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7429FDBA-823D-4F46-88E7-5C1B345FDC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7429FDBA-823D-4F46-88E7-5C1B345FDC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7429FDBA-823D-4F46-88E7-5C1B345FDC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7429FDBA-823D-4F46-88E7-5C1B345FDC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7EB2F4-8C39-481A-8B75-3D2350C95CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7EB2F4-8C39-481A-8B75-3D2350C95CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7EB2F4-8C39-481A-8B75-3D2350C95CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7EB2F4-8C39-481A-8B75-3D2350C95CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{340EF931-2632-41A1-84D0-428859435F32} = {63BF8FF5-C495-416D-A22B-537390D91144}
+		{7429FDBA-823D-4F46-88E7-5C1B345FDC20} = {AD4A697C-74B6-42F5-B7DA-262A658003EA}
+		{8A7EB2F4-8C39-481A-8B75-3D2350C95CC5} = {AD4A697C-74B6-42F5-B7DA-262A658003EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {891750B8-95C2-4253-88C8-2102B871BF41}
