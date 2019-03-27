@@ -24,7 +24,7 @@ namespace RJL.UIP.CPro.HW3.WeatherSubscription.Services
             var client = new OpenWeatherAPI.OpenWeatherAPI(APIKey);
             var results = client.Query(City);
             WeatherForecast weather = new WeatherForecast();
-            weather.Temperature = results.Main.Temperature.ToString();
+            weather.Temperature = results.Main.Temperature.CelsiusCurrent.ToString();
             weather.WindSpeed = results.Wind.SpeedFeetPerSecond.ToString();
             weather.Pressure = results.Main.Pressure.ToString();
             weather.City = this.City;
