@@ -24,14 +24,21 @@ namespace RJL.UIP.CPro.HW3.WeatherSubscription
 
             weatherForecastKyiv.Subscribe(file);
             weatherForecastKyiv.Subscribe(console);
+            IDisposable unsubWeatherForecastKyiv = weatherForecastKyiv.Subscribe(file);
+            IDisposable unsubWeatherForecastKyiv2 = weatherForecastKyiv.Subscribe(console);
 
             weatherForecastLviv.Subscribe(file);
             weatherForecastLviv.Subscribe(console);
-           
+
+            IDisposable unsubWeatherForecastLviv = weatherForecastKyiv.Subscribe(file);
+            IDisposable unsubWeatherForecastLviv2 = weatherForecastKyiv.Subscribe(console);
+
             for (int i = 0; i < 10; i++)
             {
                 weatherForecastKyiv.ChangeForecast(weatherKyiv.GetForecast());
                 weatherForecastLviv.ChangeForecast(weatherLviv.GetForecast());
+                unsubWeatherForecastKyiv.Dispose();
+                unsubWeatherForecastKyiv2.Dispose();
             }
 
             Console.ReadLine();

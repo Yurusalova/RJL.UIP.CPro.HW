@@ -15,15 +15,25 @@ namespace RJL.UIP.CPro.HW3.WeatherSubscription.Services
 
         public IDisposable Subscribe(IObserver<WeatherForecast> observer)
         {
-            this.Observers.Add(observer);
-            return new Unsubscriber();
+            if (!Observers.Contains(observer))
+                Observers.Add(observer);
+
+            return new Unsubscriber(Observers, observer);
         }
 
         private class Unsubscriber : IDisposable
         {
+            private List<IObserver<WeatherForecast>> _observers;
+            private IObserver<WeatherForecast> _observer;
+
+            public Unsubscriber(List<IObserver<WeatherForecast>> observers, IObserver<WeatherForecast> observer)
+            {
+                this._observers = observers;
+                this._observer = observer;
+            }
             public void Dispose()
             {
-                throw new NotImplementedException();
+                if (!(_observer == null)|| _observers.Contains(_observer)) _observers.Remove(_observer);
             }
         }
 
