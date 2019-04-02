@@ -18,8 +18,8 @@ namespace RJL.UIP.CPro.HW3.WeatherSubscription
 
             WeatherHandler weatherForecastKyiv = new WeatherHandler();
             WeatherHandler weatherForecastLviv = new WeatherHandler();
-
-            FileStorage file = new FileStorage(@"c:\temp\weather.txt");
+            string path = @"c:\temp\" + DateTime.Today.ToString("yyyyMMdd") + ".txt";
+            FileStorage file = new FileStorage(path);
             ConsoleStorage console = new ConsoleStorage();
 
             weatherForecastKyiv.Subscribe(file);
@@ -37,8 +37,8 @@ namespace RJL.UIP.CPro.HW3.WeatherSubscription
             {
                 weatherForecastKyiv.ChangeForecast(weatherKyiv.GetForecast());
                 weatherForecastLviv.ChangeForecast(weatherLviv.GetForecast());
-                unsubWeatherForecastKyiv.Dispose();
-                unsubWeatherForecastKyiv2.Dispose();
+               // unsubWeatherForecastKyiv.Dispose();
+                //unsubWeatherForecastKyiv2.Dispose();
             }
 
             Console.ReadLine();
