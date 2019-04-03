@@ -16,7 +16,7 @@ namespace RJL.UIP.CPro.HW3.WeatherSubscription.Models
 
         public override string ToString()
         {
-            return $"{DTime}: City={City}, Temperature={Temperature}, WindSpeed={WindSpeed}, Pressure={Pressure}";
+            return $"{DTime}: City={City}; Temperature={Temperature}; WindSpeed={WindSpeed}; Pressure={Pressure};";
         }
     }
 }
