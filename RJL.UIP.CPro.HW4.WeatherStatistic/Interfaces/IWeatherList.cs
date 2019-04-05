@@ -11,5 +11,13 @@ namespace RJL.UIP.CPro.HW4.WeatherStatistic.Interfaces
     {
         void Push(Weather v);
         void Print();
+        bool IsEmpty();
+        Weather Peek();
+        Weather GetMaxTemperatureWeather();
+        Weather GetMinTemperatureWeather();
+        Weather GetMaxWindSpeedWeather();
+        Weather GetMinWindSpeedWeather();
+        Weather GetMaxPressureWeather();
+        Weather GetMinPressureWeather();
     }
 }

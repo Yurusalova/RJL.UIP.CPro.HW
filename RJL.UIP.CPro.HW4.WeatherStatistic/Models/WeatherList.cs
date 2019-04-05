@@ -15,7 +15,7 @@ namespace RJL.UIP.CPro.HW4.WeatherStatistic.Models
         private int top;
         public WeatherList()
         {
-            mas = new Weather[10];
+            mas = new Weather[1];
             top = -1;
         }
         public WeatherList(int n)
@@ -75,5 +75,119 @@ namespace RJL.UIP.CPro.HW4.WeatherStatistic.Models
                 Console.WriteLine(item + ", ");
             }
         }
+
+        public Weather GetMaxTemperatureWeather()
+        {
+            Weather weatherMaxTemp = new Weather();
+            weatherMaxTemp = mas[0];
+
+            for (int i = 1; i < mas.Length; i++)
+            {
+                if (mas[i] != null && weatherMaxTemp.Temperature < mas[i].Temperature)
+                {
+
+                    weatherMaxTemp = mas[i];
+                }
+                else { continue; }
+            }
+          
+            return weatherMaxTemp;
+        }
+        public Weather GetMinTemperatureWeather()
+        {
+            Weather weatherMinTemp = new Weather();
+            weatherMinTemp = mas[0];
+
+            for (int i = 1; i < mas.Length; i++)
+            {
+                if (mas[i] != null && weatherMinTemp.Temperature > mas[i].Temperature)
+                {
+
+                    weatherMinTemp = mas[i];
+                }
+                else {
+                    continue;
+                }
+            }
+
+            return weatherMinTemp;
+        }
+
+        public Weather GetMaxWindSpeedWeather()
+        {
+            Weather weatherMaxWindSpeed = new Weather();
+            weatherMaxWindSpeed = mas[0];
+
+            for (int i = 1; i < mas.Length; i++)
+            {
+                if (mas[i] != null && weatherMaxWindSpeed.WindSpeed < mas[i].WindSpeed)
+                {
+
+                    weatherMaxWindSpeed = mas[i];
+                }
+                else { continue; }
+            }
+
+            return weatherMaxWindSpeed;
+        }
+        public Weather GetMinWindSpeedWeather()
+        {
+            Weather weatherMinWindSpeed = new Weather();
+            weatherMinWindSpeed = mas[0];
+
+            for (int i = 1; i < mas.Length; i++)
+            {
+                if (mas[i] != null && weatherMinWindSpeed.WindSpeed > mas[i].WindSpeed)
+                {
+
+                    weatherMinWindSpeed = mas[i];
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            return weatherMinWindSpeed;
+        }
+
+        public Weather GetMaxPressureWeather()
+        {
+            Weather weatherMaxPressure = new Weather();
+            weatherMaxPressure = mas[0];
+
+            for (int i = 1; i < mas.Length; i++)
+            {
+                if (mas[i] != null && weatherMaxPressure.Pressure < mas[i].Pressure)
+                {
+
+                    weatherMaxPressure = mas[i];
+                }
+                else { continue; }
+            }
+
+            return weatherMaxPressure;
+        }
+        public Weather GetMinPressureWeather()
+        {
+            Weather weatherMinPressure = new Weather();
+            weatherMinPressure = mas[0];
+
+            for (int i = 1; i < mas.Length; i++)
+            {
+                if (mas[i] != null && weatherMinPressure.Pressure > mas[i].Pressure)
+                {
+
+                    weatherMinPressure = mas[i];
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            return weatherMinPressure;
+        }
     }
 }
+
